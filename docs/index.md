@@ -23,29 +23,30 @@ Whole step by step process, with detailed documentation can be found below on [o
 Shorter version is here (this process assumes that W10 is an OS from which RPI Os is being prepared):
 
 ### Install using Imager
+
 1. Download the latest Imager [software](https://www.raspberrypi.com/software/)
    
-   1. Choose Device: RPI 4
-   2. Operating System: Raspberry Pi OS (64-bit) * but since this RPI is being accessed only through SSH, this could've been "lite" version of OS
-   3. Storage (SD card)
+      1. Choose Device: RPI 4
+      2. Operating System: Raspberry Pi OS (64-bit) * but since this RPI is being accessed only through SSH, this could've been "lite" version of OS
+      3. Storage (SD card)
 
 2. Customize OS
 
-   1. a username and password
-   2. Wi-Fi credentials (optional)
-   3. the device hostname 
-   4. the time zone
-   5. your keyboard layout (optional)
-   6. **remote connectivity** (since we're only connecting via SSH this is a must).
-      1. Services (second tab) provides option to **enable SSH** and to choose authentication method (password authentication).
-   7. Lastly Save changes and wait for installation to finish
+      1. a username and password
+      2. Wi-Fi credentials (optional)
+      3. the device hostname 
+      4. the time zone
+      5. your keyboard layout (optional)
+      6. **remote connectivity** (since we're only connecting via SSH this is a must).
+         - Services (second tab) provides option to **enable SSH** and to choose authentication method (password authentication).
+      7. Lastly Save changes and wait for installation to finish
 
 3. First RPI boot
 
-   1. Make sure that the RPI's power cable is unplugged
-   2. Insert SD card
-   3. Plug in power cable
-   4. If RPI does not boot within 2-3 minutes, check the status LED. If it’s flashing, see the LED warning flash codes for [more information](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes).
+      1. Make sure that the RPI's power cable is unplugged
+      2. Insert SD card
+      3. Plug in power cable
+      4. If RPI does not boot within 2-3 minutes, check the status LED. If it’s flashing, see the LED warning flash codes for [more information](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes).
 
 You should be good to go from here, as far as I remember.
 
@@ -83,12 +84,12 @@ The docker container setup is fairly simple:
 3. Go to the DuckDNS docker image on LinuxServer and copy the docker-compose configuration
 4. Environment Changes
 
-   1. Change the value for `TOKEN` (insert your own)
-   2. Change the value for `SUBDOMAINS` (comma separated list)
+      1. Change the value for `TOKEN` (insert your own)
+      2. Change the value for `SUBDOMAINS` (comma separated list)
 
 5. Volume changes
 
-   1. Locate them wherever you wish (recommended inside the folder that holds the yml file in the folder named (`config`))
+      1. Locate them wherever you wish (recommended inside the folder that holds the yml file in the folder named (`config`))
 
 6. Voila you have a docker container that will take care of updating your public IP address for the desired subdomain
 7. The only thing you'll need is to start it up with `docker-compose up -d`
@@ -121,19 +122,19 @@ The docker container setup is fairly simple:
 3. Go to the WireGuard docker image on LinuxServer and copy the docker-compose configuration
 4. Environment Changes
 
-   1. Change the value for `SERVERURL` (subdomain.duckdns.org)
-   2. Change the value for `SERVERPORT` (optional, if left blank it will use the default value)
-   3. Change the value for `PEERS` (how many, devices you want to be able to connect to the VPN, use integer)
+      1. Change the value for `SERVERURL` (subdomain.duckdns.org)
+      2. Change the value for `SERVERPORT` (optional, if left blank it will use the default value)
+      3. Change the value for `PEERS` (how many, devices you want to be able to connect to the VPN, use integer)
 
 5. Volume changes
 
-   1. Locate them wherever you wish (recommended inside the folder that holds the yml file in the folder named (`config`))
-   2. Do the same for modules (recommended inside the folder that holds the yml file in the folder named (`modules`))
+      1. Locate them wherever you wish (recommended inside the folder that holds the yml file in the folder named (`config`))
+      2. Do the same for modules (recommended inside the folder that holds the yml file in the folder named (`modules`))
 
 6. Ports Changes (optional) if you used any other port for `SERVERPORT`
 
-   1. Map device port to the docker container port (e.g. `- 1234:51820/udp`)
-   2. **IMPORTANT** If you want to have the SSH access while being connected to the VPN you must map the ports (e.g. `- 6666:22/tcp`)
+      1. Map device port to the docker container port (e.g. `- 1234:51820/udp`)
+      2. **IMPORTANT** If you want to have the SSH access while being connected to the VPN you must map the ports (e.g. `- 6666:22/tcp`)
 
 7. Voila you have a docker container that will take care of updating your public IP address for the desired subdomain
 8. The only thing you'll need is to start it up with `docker-compose up -d`
