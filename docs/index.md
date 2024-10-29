@@ -2,6 +2,8 @@
 
 Idea: Learn about self hosting, networking and creating relatively safe RPI that's exposed to the Internet.
 
+Goal: Create a relatively safe RPI that's exposed to the Internet.
+
 This RPI can and probably will be used as a home server and/or a server that can host multiple web API's (with the intention that they will strictly communicate with one or two devices outside home network).
 
 *note: At the time of writing this md file, you can consider me a beginner to RPI, and thus some of notes might be over explained while others might not be.
@@ -220,3 +222,5 @@ sudo nano 10-uname
 
 ## TODO: 
 Once this gets too messy, create a hierarchy for files
+
+- Explore on what next to do to accomplish the goal.
