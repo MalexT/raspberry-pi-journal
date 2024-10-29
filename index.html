@@ -1,0 +1,835 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>RPI Journal</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#raspberry-pi-journal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="RPI Journal" class="md-header__button md-logo" aria-label="RPI Journal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RPI Journal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Raspberry PI Journal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MalexT/raspberry-pi-journal" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MalexT/raspberry-pi-journal
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  Raspberry PI Journal
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="RPI Journal" class="md-nav__button md-logo" aria-label="RPI Journal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    RPI Journal
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MalexT/raspberry-pi-journal" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MalexT/raspberry-pi-journal
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Raspberry PI Journal
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry PI Journal
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rpi-os-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      RPI OS Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RPI OS Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-using-imager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install using Imager
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker containers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker containers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duckdns-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      DuckDNS Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wireguard-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      WireGuard Container
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-useful-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other useful software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other useful software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hstr" class="md-nav__link">
+    <span class="md-ellipsis">
+      HSTR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certbot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lets-encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Encrypt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fail2ban" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail2Ban
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-modifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network modifications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network modifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reserving-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reserving IP address
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-forwarding-wireguard-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port Forwarding (Wireguard, etc.)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-additionschangesmodifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other additions/changes/modifications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="raspberry-pi-journal">Raspberry PI Journal</h1>
+<p>Idea: Learn about self hosting, networking and creating relatively safe RPI that's exposed to the Internet.</p>
+<p>Goal: Create a relatively safe RPI that's exposed to the Internet.</p>
+<p>This RPI can and probably will be used as a home server and/or a server that can host multiple web API's (with the intention that they will strictly communicate with one or two devices outside home network).</p>
+<p>*note: At the time of writing this md file, you can consider me a beginner to RPI, and thus some of notes might be over explained while others might not be.</p>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li>Raspberry PI 4 - further known as RPI</li>
+<li>RPI heatsink (for now nothing more's needed)</li>
+<li>RPI Power Cable</li>
+<li>MicroSD card (size used 32GB)</li>
+<li>MicroSD card reader (optional)</li>
+<li>Ethernet cable (optional)</li>
+<li>RPI case (optional)</li>
+</ul>
+<h2 id="rpi-os-installation">RPI OS Installation</h2>
+<p>Whole step by step process, with detailed documentation can be found below on <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">official site</a>.<br>
+Shorter version is here (this process assumes that W10 is an OS from which RPI Os is being prepared):</p>
+<h3 id="install-using-imager">Install using Imager</h3>
+<ol>
+<li>
+<p>Download the latest Imager <a href="https://www.raspberrypi.com/software/">software</a></p>
+<ol>
+<li>Choose Device: RPI 4</li>
+<li>Operating System: Raspberry Pi OS (64-bit) * but since this RPI is being accessed only through SSH, this could've been "lite" version of OS</li>
+<li>Storage (SD card)</li>
+</ol>
+</li>
+<li>
+<p>Customize OS</p>
+<ol>
+<li>a username and password</li>
+<li>Wi-Fi credentials (optional)</li>
+<li>the device hostname </li>
+<li>the time zone</li>
+<li>your keyboard layout (optional)</li>
+<li><strong>remote connectivity</strong> (since we're only connecting via SSH this is a must).<ul>
+<li>Services (second tab) provides option to <strong>enable SSH</strong> and to choose authentication method (password authentication).</li>
+</ul>
+</li>
+<li>Lastly Save changes and wait for installation to finish</li>
+</ol>
+</li>
+<li>
+<p>First RPI boot</p>
+<ol>
+<li>Make sure that the RPI's power cable is unplugged</li>
+<li>Insert SD card</li>
+<li>Plug in power cable</li>
+<li>If RPI does not boot within 2-3 minutes, check the status LED. If it’s flashing, see the LED warning flash codes for <a href="https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes">more information</a>.</li>
+</ol>
+</li>
+</ol>
+<p>You should be good to go from here, as far as I remember.</p>
+<h2 id="docker-containers">Docker containers</h2>
+<p>Next chapter is dedicated to docker containers I installed on RPI.<br>
+The following list is in the order I added them.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://www.duckdns.org/">DuckDNS</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="https://www.wireguard.com/">WireGuard</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> NgRok?</li>
+</ul>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Docker</li>
+<li>Docker Compose</li>
+</ul>
+<hr />
+<h3 id="duckdns-container">DuckDNS Container</h3>
+<p>source: <a href="https://docs.linuxserver.io/images/docker-duckdns/">Linux Server</a></p>
+<p><strong>What is:</strong> A simple but effective DDNS (dynamic DNS) service.</p>
+<p>The reason for why I chose DuckDNS, is simple. It is really simple to setup up and to keep up to date with the changes my ISP makes to my public IP address.<br>
+Also I'm a cheap a$$ so I didn't want to pay for static IP address (this might change in the future).
+Another reason, a colleague of mine recommended it to me, another option is <a href="https://www.noip.com/">NoIP</a> but this requires a monthly check-in to keep using their services.</p>
+<p>Login to duckDNS however you wish and create a subdomain, for a free account the limit is 5 subdomains which should be more than enough for recreational purposes.<br>
+Once you create an account, you'll have the access to the token you'll need later on.</p>
+<p>The docker container setup is fairly simple:</p>
+<ol>
+<li>Create a directory (name: <code>duckdns</code>) on your RPI (optional, but recommended)</li>
+<li>Create a file in that directory <code>docker-compose.yml</code></li>
+<li>Go to the DuckDNS docker image on LinuxServer and copy the docker-compose configuration</li>
+<li>
+<p>Environment Changes</p>
+<ol>
+<li>Change the value for <code>TOKEN</code> (insert your own)</li>
+<li>Change the value for <code>SUBDOMAINS</code> (comma separated list)</li>
+</ol>
+</li>
+<li>
+<p>Volume changes</p>
+<ol>
+<li>Locate them wherever you wish (recommended inside the folder that holds the yml file in the folder named (<code>config</code>))</li>
+</ol>
+</li>
+<li>
+<p>Voila you have a docker container that will take care of updating your public IP address for the desired subdomain</p>
+</li>
+<li>The only thing you'll need is to start it up with <code>docker-compose up -d</code></li>
+</ol>
+<p>By the default if you don't provide the value for <code>UPDATE_IP</code> inside the yml file, this container will use duckDns to check your public IP address.<br>
+If you want other 3rd party to do that instead (<em>CloudFlare whoamI</em> service), you can change the value for <code>UPDATE_IP</code> to any of the following values <code>ipv4</code>, <code>ipv6</code> or <code>both</code>. <br>
+I <strong>don't</strong> recommend that.</p>
+<p>You can also specify that you want to update IPv6, but I didn't need it so good luck with that.</p>
+<p>The docker container will try to update your public IP address every 5 minutes + random noise.</p>
+<hr />
+<h3 id="wireguard-container">WireGuard Container</h3>
+<p>source: <a href="https://docs.linuxserver.io/images/docker-wireguard/">Linux Server</a></p>
+<p><strong>What is:</strong> "A simple yet fast and modern VPN that utilizes state-of-the-art cryptography."<br>
+<sub>(you might see the pattern here)</sub></p>
+<p>One of the first thoughts I had, when I bought the RPI is that I want to access my computer station from my laptop wherever I am.<br>
+And the answer to my thought is VPN, but I wanted to make my own VPN, so after some research and bugging my colleague (yes, the same one), I decided to go with WireGuard.<br>
+Another option was <a href="https://openvpn.net/">OpenVPN</a>, but everywhere I looked, the only thing I found was that it's a lot jankier to setup/maintain than it is WireGuard.
+Also since my networking experience was, well, close to nonexistent I opted out for WireGuard.</p>
+<p>The docker container setup is fairly simple:</p>
+<ol>
+<li>Create a directory (name: <em>wireguard</em>) on your RPI (optional, but recommended)</li>
+<li>Create a file in that directory <code>docker-compose.yml</code></li>
+<li>Go to the WireGuard docker image on LinuxServer and copy the docker-compose configuration</li>
+<li>
+<p>Environment Changes</p>
+<ol>
+<li>Change the value for <code>SERVERURL</code> (subdomain.duckdns.org)</li>
+<li>Change the value for <code>SERVERPORT</code> (optional, if left blank it will use the default value)</li>
+<li>Change the value for <code>PEERS</code> (how many, devices you want to be able to connect to the VPN, use integer)</li>
+</ol>
+</li>
+<li>
+<p>Volume changes</p>
+<ol>
+<li>Locate them wherever you wish (recommended inside the folder that holds the yml file in the folder named (<code>config</code>))</li>
+<li>Do the same for modules (recommended inside the folder that holds the yml file in the folder named (<code>modules</code>))</li>
+</ol>
+</li>
+<li>
+<p>Ports Changes (optional) if you used any other port for <code>SERVERPORT</code></p>
+<ol>
+<li>Map device port to the docker container port (e.g. <code>- 1234:51820/udp</code>)</li>
+<li><strong>IMPORTANT</strong> If you want to have the SSH access while being connected to the VPN you must map the ports (e.g. <code>- 6666:22/tcp</code>)</li>
+</ol>
+</li>
+<li>
+<p>Voila you have a docker container that will take care of updating your public IP address for the desired subdomain</p>
+</li>
+<li>The only thing you'll need is to start it up with <code>docker-compose up -d</code></li>
+</ol>
+<p>SSH-ing into RPI while being connected on RPI's network through VPN requires a port to be added e.g.
+<code>ssh username@hostname -p &lt;port&gt;</code>
+e.g. <code>ssh username@hostname -p 6666</code></p>
+<h2 id="other-useful-software">Other useful software</h2>
+<h3 id="docker">Docker</h3>
+<p>source: <a href="https://docs.docker.com/engine/install/ubuntu/">Docker Engine</a></p>
+<p>What is: "Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly." <a href="https://docs.docker.com/get-started/docker-overview/">read more</a></p>
+<p>How to install:
+<code>curl -sSL https://get.docker.com | sh</code></p>
+<p>Remove the need to add sudo before executing docker commands:
+<code>sudo usermod -aG docker $USER</code></p>
+<p>Note: If you installed Docker using the convenience script, you should upgrade Docker using your package manager directly.</p>
+<hr />
+<h3 id="docker-compose">Docker Compose</h3>
+<p>source: docker-compose</p>
+<p>What is: Define and run multi-container applications with Docker.</p>
+<p>How to install:
+<code>sudo apt install docker-compose</code></p>
+<p>Note:/</p>
+<hr />
+<h3 id="hstr">HSTR</h3>
+<p>I'm using PowerShell and I'm quite fond of their <a href="https://learn.microsoft.com/en-us/powershell/scripting/learn/shell/using-predictors?view=powershell-7.4">Predictive IntelliSense</a> feature, and the closest I could get to it, at the moment, was "HSTR".<br>
+<a href="https://github.com/dvorka/hstr">HSTR</a> (HiSToRy) is a command line utility that brings improved bash / zsh command completion from the history.
+I also bound HSTR to "CTRL + R" instead of reverse in '.bashrc' file.<br>
+<sub>Don't forget to source <code>~/.bashrc</code> to be able to to use new bind</sub></p>
+<hr />
+<h3 id="certbot">Certbot</h3>
+<p>TODO:</p>
+<hr />
+<h3 id="lets-encrypt">Let's Encrypt</h3>
+<p>TODO:</p>
+<hr />
+<h3 id="fail2ban">Fail2Ban</h3>
+<p>TODO:</p>
+<hr />
+<h2 id="network-modifications">Network modifications</h2>
+<p>I wont go into specifics here, because the location for the setup may vary for each router...</p>
+<h3 id="reserving-ip-address">Reserving IP address</h3>
+<p>I reserved a local IP address for RPI so that SSH-ing into it wont cause any issues (hah).<br>
+That allows me to give it a host name in local DNS records.<br>
+Which further allows me to <code>ssh username@hostname</code> instead of <code>ssh username@ip_address</code>.
+<sub>(note: hostname requires a dot "." in it so that it will be fully qualified.)
+<a href="https://superuser.com/questions/1078467/why-cannot-i-ping-computer-name-without-dot/1078468">read more_1</a>;
+<a href="https://superuser.com/questions/1078460/why-do-i-need-to-add-a-period-after-hostname-in-order-to-get-dns-resolution-to-w">read more_2</a></sub></p>
+<h3 id="port-forwarding-wireguard-etc">Port Forwarding (Wireguard, etc.)</h3>
+<p>Added a port forwarding rule for Wireguard that's running on RPI, so that all the traffic that hit's my router on specific port is redirected to RPI, specifically docker container running Wireguard.<br>
+Added this port forwarding for VPN.
+Probably another port will be forwarded but that will happen in the future.</p>
+<h2 id="other-additionschangesmodifications">Other additions/changes/modifications</h2>
+<p>Personally, I dislike motd and that's the first thing when I SSH'd into RPI, I removed it by deleting the content of <strong>motd</strong> file<br>
+<code>sudo nano /etc/motd</code>.</p>
+<hr />
+<p>Additionally I added a banner that shows up before someone tries to access RPI through SSH (<a href="https://www.tecmint.com/ssh-warning-banner-linux/">link</a>)
+Steps to create a banner for SSH</p>
+<ol>
+<li>Position in /etc/ssh/ folder and write your banner</li>
+<li>Create a 'sshd-banner' file inside that folder</li>
+<li>Locate '#Banner none' directive inside ssh_config</li>
+<li>Replace 'none' with /etc/ssh/sshd-banner and remove comment</li>
+<li>Restart sshd service and you're done, and on next login, before being prompted for password, you'll see the banner</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>/etc/ssh/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>sshd-banner
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>nano<span class="w"> </span>sshd_config
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
+</code></pre></div>
+<hr />
+<p>Also I removed the message about kernel version after login.<br>
+Inside '10-uname' file I removed both shebang and 'uname -snrvm'. (who knows I might return it at some point)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>/etc/update-motd.d/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span><span class="m">10</span>-uname
+</code></pre></div></p>
+<h2 id="notes">Notes:</h2>
+<h2 id="todo">TODO:</h2>
+<p>Once this gets too messy, create a hierarchy for files</p>
+<ul>
+<li>Explore on what next to do to accomplish the goal.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Aleksa
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.tabs", "navigation.sections", "toc.follow", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
