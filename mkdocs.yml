@@ -36,9 +36,7 @@ theme:
         name: Switch to light mode    
       primary: black
       accent: yellow
-extra:
-  version:
-    provider: mike
+# extra:
   # generator: false # for removing "Made with Material for MkDocs"
 
 markdown_extensions:
