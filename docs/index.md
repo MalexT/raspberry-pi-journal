@@ -7,6 +7,7 @@ This RPI can and probably will be used as a home server and/or a server that can
 *note: At the time of writing this md file, you can consider me a beginner to RPI, and thus some of notes might be over explained while others might not be.
 
 **Prerequisites**
+
 - Raspberry PI 4 - further known as RPI
 - RPI heatsink (for now nothing more's needed)
 - RPI Power Cable
@@ -21,19 +22,24 @@ Shorter version is here (this process assumes that W10 is an OS from which RPI O
 
 ### Install using Imager
 1. Download the latest Imager [software](https://www.raspberrypi.com/software/)
+   
    - Choose Device: RPI 4
    - Operating System: Raspberry Pi OS (64-bit) * but since this RPI is being accessed only through SSH, this could've been "lite" version of OS
    - Storage (SD card)
 2. Customize OS
+   
    - a username and password
    - Wi-Fi credentials (optional)
    - the device hostname 
    - the time zone
    - your keyboard layout (optional)
    - **remote connectivity** (since we're only connecting via SSH this is a must).
+  
      - Services (second tab) provides option to **enable SSH** and to choose authentication method (password authentication).
    - Lastly Save changes and wait for installation to finish
+
 3. First RPI boot
+
    - Make sure that the RPI's power cable is unplugged
    - Insert SD card
    - Plug in power cable
@@ -69,14 +75,19 @@ Login to duckDNS however you wish and create a subdomain, for a free account the
 Once you create an account, you'll have the access to the token you'll need later on.
 
 The docker container setup is fairly simple:
+
 1. Create a directory (name: `duckdns`) on your RPI (optional, but recommended)
 2. Create a file in that directory `docker-compose.yml`
 3. Go to the DuckDNS docker image on LinuxServer and copy the docker-compose configuration
 4. Environment Changes
+
    1. Change the value for `TOKEN` (insert your own)
    2. Change the value for `SUBDOMAINS` (comma separated list)
+
 5. Volume changes
+
    1. Locate them wherever you wish (recommended inside the folder that holds the yml file in the folder named (`config`))
+
 6. Voila you have a docker container that will take care of updating your public IP address for the desired subdomain
 7. The only thing you'll need is to start it up with `docker-compose up -d`
 
@@ -102,19 +113,25 @@ Another option was [OpenVPN](https://openvpn.net/), but everywhere I looked, the
 Also since my networking experience was, well, close to nonexistent I opted out for WireGuard.
 
 The docker container setup is fairly simple:
+
 1. Create a directory (name: *wireguard*) on your RPI (optional, but recommended)
 2. Create a file in that directory `docker-compose.yml`
 3. Go to the WireGuard docker image on LinuxServer and copy the docker-compose configuration
 4. Environment Changes
+
    1. Change the value for `SERVERURL` (subdomain.duckdns.org)
    2. Change the value for `SERVERPORT` (optional, if left blank it will use the default value)
    3. Change the value for `PEERS` (how many, devices you want to be able to connect to the VPN, use integer)
+
 5. Volume changes
+
    1. Locate them wherever you wish (recommended inside the folder that holds the yml file in the folder named (`config`))
    2. Do the same for modules (recommended inside the folder that holds the yml file in the folder named (`modules`))
 6. Ports Changes (optional) if you used any other port for `SERVERPORT`
+
    1. Map device port to the docker container port (e.g. `- 1234:51820/udp`)
    2. **IMPORTANT** If you want to have the SSH access while being connected to the VPN you must map the ports (e.g. `- 6666:22/tcp`)
+
 7. Voila you have a docker container that will take care of updating your public IP address for the desired subdomain
 8. The only thing you'll need is to start it up with `docker-compose up -d`
 
@@ -191,6 +208,7 @@ Personally, I dislike motd and that's the first thing when I SSH'd into RPI, I r
 ---
 Additionally I added a banner that shows up before someone tries to access RPI through SSH ([link](https://www.tecmint.com/ssh-warning-banner-linux/))
 Steps to create a banner for SSH
+
 1. Position in /etc/ssh/ folder and write your banner
 2. Create a 'sshd-banner' file inside that folder
 3. Locate '#Banner none' directive inside ssh_config
