@@ -24,28 +24,28 @@ Shorter version is here (this process assumes that W10 is an OS from which RPI O
 
 ### Install using Imager
 1. Download the latest Imager [software](https://www.raspberrypi.com/software/)
-
-   - Choose Device: RPI 4
-   - Operating System: Raspberry Pi OS (64-bit) * but since this RPI is being accessed only through SSH, this could've been "lite" version of OS
-   - Storage (SD card)
+   
+   1. Choose Device: RPI 4
+   2. Operating System: Raspberry Pi OS (64-bit) * but since this RPI is being accessed only through SSH, this could've been "lite" version of OS
+   3. Storage (SD card)
 
 2. Customize OS
 
-   - a username and password
-   - Wi-Fi credentials (optional)
-   - the device hostname 
-   - the time zone
-   - your keyboard layout (optional)
-   - **remote connectivity** (since we're only connecting via SSH this is a must).
-     - Services (second tab) provides option to **enable SSH** and to choose authentication method (password authentication).
-   - Lastly Save changes and wait for installation to finish
+   1. a username and password
+   2. Wi-Fi credentials (optional)
+   3. the device hostname 
+   4. the time zone
+   5. your keyboard layout (optional)
+   6. **remote connectivity** (since we're only connecting via SSH this is a must).
+      1. Services (second tab) provides option to **enable SSH** and to choose authentication method (password authentication).
+   7. Lastly Save changes and wait for installation to finish
 
 3. First RPI boot
 
-   - Make sure that the RPI's power cable is unplugged
-   - Insert SD card
-   - Plug in power cable
-   - If RPI does not boot within 2-3 minutes, check the status LED. If it’s flashing, see the LED warning flash codes for [more information](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes).
+   1. Make sure that the RPI's power cable is unplugged
+   2. Insert SD card
+   3. Plug in power cable
+   4. If RPI does not boot within 2-3 minutes, check the status LED. If it’s flashing, see the LED warning flash codes for [more information](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes).
 
 You should be good to go from here, as far as I remember.
 
@@ -81,7 +81,6 @@ The docker container setup is fairly simple:
 1. Create a directory (name: `duckdns`) on your RPI (optional, but recommended)
 2. Create a file in that directory `docker-compose.yml`
 3. Go to the DuckDNS docker image on LinuxServer and copy the docker-compose configuration
-
 4. Environment Changes
 
    1. Change the value for `TOKEN` (insert your own)
