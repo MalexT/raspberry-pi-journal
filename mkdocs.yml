@@ -1,0 +1,42 @@
+site_name: RPI Journal
+
+copyright: Copyright &copy; 2024 Aleksa
+
+# Repository
+repo_name: MalexT/raspberry-pi-journal
+repo_url: https://github.com/MalexT/raspberry-pi-journal
+edit_uri: ""
+
+theme:
+  name: material
+  features:
+    - header.autohide
+    - navigation.tabs
+    - navigation.sections
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - navigation.footer
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: black
+      accent: red
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: black
+      accent: yellow
+extra:
+  version:
+    provider: mike
+  # generator: false # for removing "Made with Material for MkDocs"
